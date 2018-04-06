@@ -19,6 +19,7 @@ public class Crawler {
 		infos = takeInfos(pag);
 		JsonObject json = addArrayJson(infos);
 		printJson(json);
+		int a = 1;
 				
 	}
 	
