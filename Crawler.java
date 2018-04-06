@@ -19,11 +19,11 @@ public class Crawler {
 		infos = takeInfos(pag);
 		JsonObject json = addArrayJson(infos);
 		printJson(json);
-	
+	//teste
 				
 	}
 	
-	//Function que pega as informações da página web
+	//Function que pega as informaÃ§Ãµes da pÃ¡gina web
 	public static ArrayList takeInfos(String pag) throws IOException{
 		Document doc = Jsoup.connect(pag).get();
 		Document docDesc = null;
@@ -65,7 +65,7 @@ public class Crawler {
 			for (Element elementP : tagP) {
 
 				String a = elementP.select("p").text().trim();
-				if(!a.equals(" ")){
+				if(!a.equals("Â ")){
 					type = "text";
 					desc = new Description(type, elementP.select("p").text().trim(), new String[] {});	
 					listDesc.add(desc);
@@ -150,7 +150,7 @@ public class Crawler {
 	        jsonDescription.add("description", itemDescrip);  
 	        jsonItem.add("item"+nCnt, jsonDescription);  
 	         
-	        //Limpa variáveis
+	        //Limpa variÃ¡veis
 	        descript.clear();
 	        nCnt2 = 0;
 	      
